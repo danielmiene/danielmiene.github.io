@@ -1,5 +1,5 @@
  .hero{
-        height: calc(100dvh - 64px);
+        height: calc(60dvh - 64px);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -60,4 +60,5 @@
     }
 
 }
+
 
