@@ -1,0 +1,45 @@
+.services{
+   max-width: 1200px;
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 1;
+        justify-content: center;
+        margin: 0 auto 64px auto;
+        z-index: 10;
+   
+
+   h1{
+    font-family: var(--heading);
+            font-size: 48px;
+            color: var(--contrast);
+            span{
+                color: var(--primary);
+            }
+   }
+
+           p{    
+            font-family: var(--text);
+            color: var(--body-text);
+            line-height: 1.5;
+            font-size: 18px;
+            margin-bottom: 24px;
+            margin-top: 16px;
+            width: 60%;
+           
+            }
+
+    .servicesWrapper{
+        display: flex;
+        
+            gap: 48px;
+            flex-wrap: wrap;
+            
+            div{
+                flex-basis: 45%;
+                flex-shrink: 1;
+            }
+       
+    }
+    
+}

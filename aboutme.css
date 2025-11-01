@@ -1,0 +1,276 @@
+ .aboutMe{
+        padding: 16px;
+        display: flex;
+        max-width: 1200px;
+        margin: auto;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+        z-index: 10;
+
+
+        #abtWrapper{
+            display: flex;
+            width: 100%;
+            gap: 32px;
+            justify-content: center;
+            
+        }
+
+        .inner1 {
+            width: 50%;
+        }
+
+        .inner2{
+            flex:auto;
+        }
+
+      
+
+        
+
+        h1{
+            font-family: var(--heading);
+            font-size: 48px;
+            color: var(--contrast);
+            
+             span{
+                    color: var(--primary);
+                }
+        }
+
+        p{
+            font-family: var(--text);
+            color: var(--body-text);
+            line-height: 1.5;
+            font-size: 16px;
+            margin-bottom: 24px;
+            margin-top: 16px;
+            letter-spacing: 1px;
+        }
+
+        button{
+                position: relative;
+                border: none;
+                background: transparent;
+                padding: 0;
+                cursor: pointer;
+                outline-offset: 4px;
+                transition: filter 250ms;
+                user-select: none;
+                touch-action: manipulation;
+                
+
+                .shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: hsl(0deg 0% 0% / 0.25);
+                will-change: transform;
+                transform: translateY(2px);
+                transition: transform
+                    600ms
+                    cubic-bezier(.3, .7, .4, 1);
+                }
+
+                .edge {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: linear-gradient(
+                    to left,
+                    var(--contrast) 0%,
+                    var(--contrast) 8%,
+                    var(--contrast) 92%,
+                    var(--contrast) 100%
+                );
+                }
+
+                .front {
+                font-family: var(--text);
+                font-weight: 600;
+                display: flex;
+                gap: 4px;
+                position: relative;
+                padding: 12px 24px;
+                border-radius: 12px;
+                font-size: 0.9rem;
+                color: white;
+                background: var(--primary);
+                will-change: transform;
+                transform: translateY(-4px);
+                transition: transform
+                    600ms
+                    cubic-bezier(.3, .7, .4, 1);
+
+                    i{
+                        align-self: center;
+                    }
+                }
+
+                &:hover{
+                    filter: brightness(110%);
+
+                    .front{
+                        transform: translateY(-6px);
+                        transition: transform
+                            250ms
+                            cubic-bezier(.3, .7, .4, 1.5);
+                    }
+
+                     .shadow {
+                    transform: translateY(4px);
+                    transition: transform
+                        250ms
+                        cubic-bezier(.3, .7, .4, 1.5);
+                    }
+                }
+
+                &:active {
+                    .shadow {
+                    transform: translateY(1px);
+                    transition: transform 34ms;
+                    }
+
+                    .front{
+                    transform: translateY(-2px);
+                    transition: transform 34ms;
+                        } }
+
+                        &:focus:not(:focus-visible) {
+                    outline: none;
+                    }
+            } 
+            
+           aside{
+            border: solid 2px var(--primary);
+            padding: 32px;
+            border-radius: 10px;
+            display: flex;
+            
+            gap: 24px;
+            background-color: var(--secondary);
+            margin-bottom: 16px;
+
+            p{
+                max-width: 400px;
+                margin: 0;
+                color: var(--contrast);
+            }
+
+            h2{
+                font-family: var(--heading);
+                color: var(--primary);
+                margin-bottom: 8px;
+                line-height: 1;
+
+            }
+
+            i{  display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 64px;
+                width: 64px;
+                font-size: 32px;
+                background: var(--primary);
+                color:var(--contrast);
+                border-radius: 6px;
+                padding: 8px;
+                
+                
+            }
+           }
+
+           .techStack{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 48px;
+
+            h2{
+                font-family: var(--heading);
+                font-weight: 700;
+                font-size: 32px;
+                color: var(--primary);
+                margin-bottom: 24px;
+
+               
+                
+            }
+
+            
+
+           button{
+            color:var(--body-text);
+            background: var(--primary);
+            font-family: var(--text);
+            font-size: 16px;
+            font-weight: 700;
+            padding: 12px 20px;
+            border-radius: 50px;
+            line-height: 1;
+           }
+
+           .skillWrapper{
+            display: flex;
+            gap: 16px;
+            width: 60%;
+            flex-wrap: wrap;
+            justify-content: center;
+           }
+           }
+        }
+
+        @media screen  and (max-width:475px){
+            .aboutMe{
+                h1{
+                    font-size: 24px;
+                }
+
+                p{
+                    font-size: 12px;
+                }
+
+                h2{
+                    font-size: 16px;
+                }
+
+                .techStack{
+                    h2{font-size: 20px;
+                        margin-bottom: 16px;}
+
+                    button{
+                        font-size: 12px;
+                    }
+
+                    .skillWrapper{
+                        width: 100%;
+                        gap: 12px;
+                    }
+                }
+
+                aside{
+                    padding: 16px;
+                    gap: 12px;
+
+                    i{
+                        font-size: 24px;
+                        height:48px ;
+                    }
+                }
+
+                button{
+                    .front{
+                        font-size: 0.8rem;
+                        padding: 10px 18px;
+                    }
+                }
+            }
+        }

@@ -1,0 +1,268 @@
+:root{
+    --neutral:#161925;
+    --primary:#406e8e;
+    --secondary:#8ea8c3;
+    --body-text:#cbf7ed;
+    --contrast:#23395b;
+    --heading: "Roboto", sans-serif;
+    --text:"Open Sans", sans-serif;
+    --accent: #f0003c;
+    --headerText:hsl(104, 35%, 10%);
+    --nuetral1:hsl(120, 4%, 100%);
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--neutral);
+    position: relative;
+   
+    
+
+    header{
+        
+        
+        display: flex;
+        max-width: 1200px;
+        padding: 0px 16px;
+        margin: auto;
+        background-color: var(--neutral);
+        height: 64px;
+       
+       
+        
+        
+
+    
+        
+        .wrapper{
+           
+            display: flex;
+           justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            
+            font-family: "Open Sans",sans-serif;
+        
+            
+            
+
+            img{
+                width: 64px;
+                height: 64px;
+                mix-blend-mode:multiply;
+            
+            }
+
+            ul{
+                display: flex;
+                gap:32px;
+                font-weight: 600;
+
+                li{
+                    list-style: none;
+                    cursor: pointer;
+                    color: var(--secondary);
+
+                    &:hover{
+
+                        color:var(--primary);
+                    }
+                }
+            }
+
+            }
+        }
+    }
+
+    .bg1{
+        
+        width: 100px;
+        height: 200px;
+        background-color: var(--accent);
+        position: fixed;
+        top: 30vh;
+        left: 40%;
+        border-radius: 50px;
+        filter: blur(100px);
+        z-index: 0;
+        animation: bgEffect1 80s linear 3s infinite alternate-reverse;
+
+
+    }
+
+
+
+
+    .bg2{
+        
+        width: 100px;
+        height: 200px;
+        background-color: var(--primary);
+        position: fixed;
+        top: 30vh;
+        left: 60%;
+        border-radius: 50px;
+        filter: blur(100px);
+        z-index: 0;
+        animation: bgEffect2 80s ease-in-out 0s infinite alternate;
+    }
+
+
+
+
+
+
+   
+    
+
+   
+        
+
+   
+    
+
+
+    .contact{
+        
+        height: calc(100% - 64px);
+        display: flex;
+        justify-content: center;
+        border-radius:16px 16px 0 0;
+        background-color: var(--body-text);
+        display: none;
+    }
+
+    .sign-up{
+        
+        font-family: system-ui,sans-serif;
+        max-width:600px;
+        min-width: 320;
+        height: 800px;
+        padding: 25px ;
+        border: solid var(--secondary) 1px;
+        border-radius: 10px;
+        background-color:hsla(120, 4%, 91%, 0.592);
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        
+
+        h2{
+            text-align: center;
+            color: var(--body-text);
+            margin-bottom: 20px;
+        }
+        
+
+        input , select{
+            width: 100%;
+            padding: 16px;
+            border: solid var(--secondary) 1px;
+            margin: 8px 0;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--body-text);
+            
+        }
+
+        button{
+            width: 100%;
+            padding: 16px;
+            background-color: var(--primary);
+            color: var(--body-text);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 8px 0;
+            font-weight: 700;
+            transition: all .5s ease-in-out;
+            
+
+            &:hover {
+                background-color: hsl(154, 15%, 37%);
+                color: var(--neutral);
+            }
+        }
+    }
+
+
+    .glitch-wrapper {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   background-color: transparent;
+}
+
+.glitch {
+   position: relative;
+   font-size: 102px;
+   font-weight: 700;
+   font-family: var(--heading);
+   line-height: 1.2;
+   color: var(--primary);
+   letter-spacing: 4px;
+   animation: shift 4s ease-in-out infinite alternate;
+   transform: skewX(0deg);
+   z-index: 1;
+}
+
+
+
+
+@media screen and (max-width : 1028px){
+            .wrapper{
+             width:100%;   
+             justify-content: space-between;
+             button{display: none;}}
+
+             .hero{
+                h2{font-size: 20px;}
+               
+             }
+             .glitch{
+                font-size: 64px;
+             }
+
+              #abtWrapper{
+                flex-direction: column;
+
+                .inner1{
+                    width: 100%;
+                }
+              }
+}
+
+
+@media screen and (max-width : 476px){
+    .wrapper{
+        nav{display: none;}
+    }
+
+    .projectWrapper{
+        flex-direction: column;
+        div{
+           width: 100%; 
+        }
+    }
+
+    .glitch{
+        font-size: 36px;
+        margin-bottom: 8px;
+    }
+}
+

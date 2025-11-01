@@ -1,0 +1,278 @@
+ .viewMe{
+                position: relative;
+                border: none;
+                background: transparent;
+                padding: 0;
+                cursor: pointer;
+                outline-offset: 4px;
+                transition: filter 250ms;
+                user-select: none;
+                touch-action: manipulation;
+
+                .shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: hsl(0deg 0% 0% / 0.25);
+                will-change: transform;
+                transform: translateY(2px);
+                transition: transform
+                    600ms
+                    cubic-bezier(.3, .7, .4, 1);
+                }
+
+                .edge {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: linear-gradient(
+                    to left,
+                    var(--contrast) 0%,
+                    var(--contrast) 8%,
+                    var(--contrast) 92%,
+                    var(--contrast) 100%
+                );
+                }
+
+                .front {
+                font-family: var(--text);
+                font-weight: 600;
+                display: block;
+                position: relative;
+                padding: 12px 27px;
+                border-radius: 12px;
+                font-size: 1.1rem;
+                color: white;
+                background: var(--primary);
+                will-change: transform;
+                transform: translateY(-4px);
+                transition: transform
+                    600ms
+                    cubic-bezier(.3, .7, .4, 1);
+                }
+
+                &:hover{
+                    filter: brightness(110%);
+
+                    .front{
+                        transform: translateY(-6px);
+                        transition: transform
+                            250ms
+                            cubic-bezier(.3, .7, .4, 1.5);
+                    }
+
+                     .shadow {
+                    transform: translateY(4px);
+                    transition: transform
+                        250ms
+                        cubic-bezier(.3, .7, .4, 1.5);
+                    }
+                }
+
+                &:active {
+                    .shadow {
+                    transform: translateY(1px);
+                    transition: transform 34ms;
+                    }
+
+                    .front{
+                    transform: translateY(-2px);
+                    transition: transform 34ms;
+                        } }
+
+                        &:focus:not(:focus-visible) {
+                    outline: none;
+                    }
+            }
+
+
+ .contactMe{
+                position: relative;
+                border: none;
+                background: transparent;
+                padding: 0;
+                cursor: pointer;
+                outline-offset: 4px;
+                transition: filter 250ms;
+                user-select: none;
+                touch-action: manipulation;
+                
+
+                .shadow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: hsl(0deg 0% 0% / 0.25);
+                will-change: transform;
+                transform: translateY(2px);
+                transition: transform
+                    600ms
+                    cubic-bezier(.3, .7, .4, 1);
+                }
+
+                .edge {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                background: linear-gradient(
+                    to left,
+                    hsl(340deg 100% 16%) 0%,
+                    hsl(340deg 100% 32%) 8%,
+                    hsl(340deg 100% 32%) 92%,
+                    hsl(340deg 100% 16%) 100%
+                );
+                }
+
+                .front {
+                font-family: var(--text);
+                font-weight: 700;
+                display: block;
+                position: relative;
+                padding: 12px 27px;
+                border-radius: 12px;
+                font-size: 1.1rem;
+                color: white;
+                background: hsl(345deg 70% 47%);
+                will-change: transform;
+                transform: translateY(-4px);
+                transition: transform
+                    600ms
+                    cubic-bezier(.3, .7, .4, 1);
+                }
+
+                &:hover{
+                    filter: brightness(110%);
+
+                    .front{
+                        transform: translateY(-6px);
+                        transition: transform
+                            250ms
+                            cubic-bezier(.3, .7, .4, 1.5);
+                    }
+
+                     .shadow {
+                    transform: translateY(4px);
+                    transition: transform
+                        250ms
+                        cubic-bezier(.3, .7, .4, 1.5);
+                    }
+                }
+
+                &:active {
+                    .shadow {
+                    transform: translateY(1px);
+                    transition: transform 34ms;
+                    }
+
+                    .front{
+                    transform: translateY(-2px);
+                    transition: transform 34ms;
+                        } }
+
+                        &:focus:not(:focus-visible) {
+                    outline: none;
+                    }
+                }
+
+
+
+.project-buttons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: var(--primary);
+  font-size: 16px;
+  border-radius: 100px;
+  background-color: var(--primary);
+  font-weight: 600;
+  color: var(--body-text);
+ 
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-buttons svg {
+  position: absolute;
+  width: 24px;
+  fill:var(--secondary);
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-buttons .arr-1 {
+  right: 16px;
+}
+
+.project-buttons .arr-2 {
+  left: -25%;
+}
+
+.project-buttons .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-buttons .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-buttons:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: var(--neutral);
+  border-radius: 12px;
+}
+
+.project-buttons:hover .arr-1 {
+  right: -25%;
+}
+
+.project-buttons:hover .arr-2 {
+  left: 16px;
+}
+
+.project-buttons:hover .text {
+  transform: translateX(12px);
+}
+
+.project-buttons:hover svg {
+  fill: var(--primary);
+}
+
+.project-buttons:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px var(--primary);
+}
+
+.project-buttons:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
